@@ -1,1 +1,3 @@
 cadquery
+ocp_vscode
+jupyter

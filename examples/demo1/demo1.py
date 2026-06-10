@@ -5,7 +5,9 @@ A basic CadQuery example showing a workplane, a box, an edge fillet,
 and a pattern of holes.
 """
 
+# %%
 import cadquery as cq
+from ocp_vscode import show
 
 length = 80.0
 width = 60.0
@@ -25,8 +27,8 @@ result = (
     .hole(hole_diameter)
 )
 
-if "show_object" in globals():
-    show_object(result)
+show(result)
 
+# %%
 cq.exporters.export(result, "demo1.stl")
 cq.exporters.export(result, "demo1.step")
